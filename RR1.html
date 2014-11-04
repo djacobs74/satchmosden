@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- Add jQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<link rel="stylesheet" href="fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+
+
 <style>
 
 #header {
@@ -22,37 +43,35 @@
 
 }
 
+.clear {clear:both;}
+
 #section {
-    width:300px;
+    float:left;
     padding:5px;
     color:white;
-    margin-left:15%;
+   width:75%;
 
 
 }
 
 .two {
-    width:300px;
+    
     padding:5px;
     color:white;
-    margin-left:113%;
-    margin-top:-153%;
-
+   
 
 }
 
 .three {
-    width:300px;
+    
     padding:5px;
     color:white;
-    margin-left:226%;
-    margin-top:-182%;
 
 
 }
 
 .four {
-    width:100px;
+  
     padding:5px;
     color:white;
   }
@@ -71,26 +90,29 @@ a {
 }
 
 #section img.first {
-  width:95%;
+ 
 
 }
 
 #section img.second {
-  width:95%;
+  
 
 }
 
 #section img.third {
-  width:95%;
+ 
 
 }
 
 #section img.fourth:hover {
-  width:95%;
-  transform:scale(2,2);
-  transform-origin:0 0;
-  
+ 
 }
+
+.fancybox-button img {
+  width:200px;
+}
+
+.section-row div {float:left; width: 30%;}
 
 </style>
 
@@ -113,27 +135,60 @@ a {
 </div>
 
 <div id="section">
-  <div class="one">
-        <p>In the beginning . . there was dirt. And some weeds. I came up with a basic track plan: a loop with a cut through (so I could change the direction of the trains) and a station with a siding. I also wanted to be able to bring the trains up to the sliding glass door in the patio. First, I built a wooden shed to store my rollong stock in, seen below without the roof</p>
-    <img class="first" src="images/shed.jpg" alt="Shed">
-  </div>
-      <div class="two">
-        <p>The shed area was my starting point. Here you can see 3 track lanes leading into it.</p>
-        <img class="second" src="images/shed2.jpg" alt="Shed2">
+
+      <div class="section-row">
+          <div class="one">
+                <p>In the beginning . . there was dirt. And some weeds. I came up with a basic track plan: a loop with a cut through (so I could change the direction of the trains) and a station with a siding. I also wanted to be able to bring the trains up to the sliding glass door in the patio. First, I built a wooden shed to store my rollong stock in, seen below without the roof</p>
+                <a class="fancybox-button" rel="fancybox-button" href="images/shed.jpg" title="Beginning">
+                  <img src="images/shed.jpg" alt="" />
+                </a>
+
+          </div>
+          <div class="two">
+            <p>The shed area was my starting point. Here you can see 3 track lanes leading into it.</p>
+            <a class="fancybox-button" rel="fancybox-button" href="images/shed2.jpg" title="Beginning2">
+              <img src="images/shed2.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="three">
+            <p>Before starting construction, I bought these gondola cars. In one car I would load 1ft sections of straight track, and in the other I kept track laying supplies and a beer. This way I could move everything along with me and it worked out great!</p>
+           <a class="fancybox-button" rel="fancybox-button" href="images/gondolas.jpg" title="gondolas">
+              <img src="images/gondolas.jpg" alt="" />
+            </a>
+          </div> 
       </div>
-      <div class="three">
-        <p>Before starting construction, I bought these gondola cars. In one car I would load 1ft sections of straight track, and in the other I kept track laying supplies and a beer. This way I could move everything along with me and it worked out great!</p>
-        <img class="third" src="images/gondolas.jpg" alt="gondolas">
-      </div> 
-      <div>
-        <p>71 rounding the corner.</p>
-        <a href="#"><img class="fourth" src="images/71.jpg" alt="71">
-      </div>   
+      <div class="clear"></div>
+      <div class="section-row">
+        <div>
+          <p>71 rounding the corner.</p>
+          <a class="fancybox-button" rel="fancybox-button" href="images/71.jpg" title="gondolas">
+            <img src="images/71.jpg" alt="" />
+          </a>
+
+        </div>  
+      </div>
+
 </div>
 
 
 
+<script type="text/javascript">
+  
+  $(document).ready(function() {
+    $(".fancybox-button").fancybox({
+      prevEffect    : 'none',
+      nextEffect    : 'none',
+      closeBtn    : false,
+      helpers   : {
+        title : { type : 'inside' },
+        buttons : {}
+      }
+    });
+});
 
+
+</script>
           
       
 
