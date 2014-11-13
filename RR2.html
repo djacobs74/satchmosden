@@ -8,9 +8,9 @@
    text-align:center;
    padding:5px;
    width: 990px;
-   height: 140px;
+   height: 50px;
    margin-left: 150px;
-   background-color: orange;
+   
    
 
 }
@@ -20,15 +20,14 @@
    width:150px;
    float:left;
    color:white;
-   background-color: red;
+   background-color:
    
 
 }
+
 #section {
-    width:1000px;
-    height: 300px;
-    padding-top: 65px;
-    background-color: blue;
+    
+    
     
 }
 
@@ -37,6 +36,54 @@ background-color: #383838;
 
 }
 
+.container {
+  position: relative;
+  height: 660px;
+  width: 960px;
+  overflow: hidden;
+  margin: 0 auto;
+
+}
+
+.container a {
+  float: left;
+  margin: 20px;
+}
+
+
+
+ 
+.big {
+  position: absolute;
+  top: 900px;
+  left: 20px;
+ 
+  -webkit-transition: top 1s ease;
+  -moz-transition: top 1s ease;
+  -o-transition: top 1s ease;
+  -ms-transition: top 1s ease;
+  transition: top 1s ease;
+}
+
+.featured {
+  top: 260px;
+  left: 20px;
+  z-index: -3;
+
+
+}
+
+
+a:hover .thumb {
+  -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+ 
+a:hover .big {
+  top: 160px;
+  max-width: 75%;
+}
 
 
 
@@ -53,12 +100,48 @@ a {
 <body>
 
   <div id="header">
+    <h2>Railroad Operations
+    </h2>
   </div>
+
 
   <div id="nav">
+    <a href="http://google.com" target="_blank">Google</a>
+    <br>
+    <a href="index.html">Home</a>
+    <br>
+    <a href="GardenRR.html">Garden RR Project</a>
+
   </div>
 
+
   <div id="section">
+      <div class="container">
+    <a href="#">
+        <img class="thumb" src="images/ops1mini.jpg">
+        <img class="big" src="images/ops1.jpg">
+    </a>
+ 
+    <a href="#">
+        <img class="thumb" src="images/ops2mini.jpg">
+        <img class="big" src="images/ops2.jpg">
+    </a>
+ 
+    <a href="#">
+        <img class="thumb" src="images/ops3mini.jpg">
+        <img class="big" src="images/ops3.jpg">
+    </a>
+ 
+    <a href="#">
+        <img class="thumb" src="images/ops4mini.jpg">
+        <img class="big" src="images/ops4.jpg">
+    </a>
+ 
+    <a href="#">
+        <img class="big featured" src="featured.jpg">
+    </a>
+      </div>
+
   </div>
 
 
